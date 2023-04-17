@@ -76,4 +76,22 @@ register_sidebar([
     'after_title' => '</a>',
 ]);
 
+register_sidebar([
+    'name' => 'Aside 1',
+    'description' => 'Widget Aside 1',
+    'id' => 'Aside1'
+]);
+
+register_sidebar([
+    'name' => 'Aside 2',
+    'description' => 'Widget Aside 2',
+    'id' => 'Aside2'
+]);
+
+register_sidebar([
+    'name' => 'Aside 3',
+    'description' => 'Widget Aside 3',
+    'id' => 'Aside3'
+]);
+
 ?>
