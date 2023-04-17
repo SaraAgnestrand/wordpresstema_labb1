@@ -12,7 +12,8 @@
 					<div class="row">
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
 							<h1>Kontakt</h1>
-							<!-- Loopa ut innehållet på sidan det behöver göras ändringar här  -->
+							<!-- Loopa ut innehållet på sidan det behöver göras ändringar här
+						Blir ej rätt  -->
 							
 							<?php
 						if( have_posts () ){
