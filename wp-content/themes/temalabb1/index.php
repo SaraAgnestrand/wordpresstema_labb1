@@ -28,6 +28,7 @@ get_template_part('template-parts/header');
 						
 
 				
+?>
                     <?php
                     $args = array(
                         'prev_text' => '<span class="pagination-prev">Föregående</span>',

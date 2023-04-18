@@ -20,7 +20,9 @@
                     		}
                     	?>
 
-						
+
+
+?>
                     <?php
                     $args = array(
                         'prev_text' => '<span class="pagination-prev">Föregående</span>',
@@ -34,6 +36,9 @@
 
                     ?>
 						</div>
+
+
+						
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<?php get_sidebar(); ?>
 						</aside>
