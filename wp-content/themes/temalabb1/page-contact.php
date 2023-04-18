@@ -1,43 +1,29 @@
-<!-- Contact form -->
-<!-- I nuläget laddas inte sidan upp, varför ta reda på det. Jag vet inte heller om jag är nöjd med den typen av contactform jag fick till med tillägget -->
-
-<?php 
-	get_template_part('template-part/header');
-
-	?>
-
-		<main>
-			<section>
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-md-8 col-md-offset-2">
-							<h1>Kontakt</h1>
-							<!-- Loopa ut innehållet på sidan det behöver göras ändringar här
-						Blir ej rätt  -->
-							
-							<?php
-						if( have_posts () ){
-							while(have_posts()){
-								the_content();
-							}
-						};
-			?>
-							<!-- <form>
-								<label>Namn</label>
-								<input type="text" />
-								<label>E-post</label>
-								<input type="email" />
-								<label>Meddelande</label>
-								<textarea></textarea>
-								<input type="submit" value="Skicka" />
-							</form> -->
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+<?php
+get_template_part('template-parts/header');
+?>
 
 
-	<?php 
-	get_template_part('template-parts/footer');
-	?>
+<main>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h1>
+                        <?php
+                        $form = get_post(36);
+                        $title = $form->post_title;
+                        echo $title;
+                        ?>
+                    </h1>
+                    <?php echo do_shortcode('[contact-form-7 id="36" title="Kontaktform"]'); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+<?php
+get_template_part('template-parts/footer');
+?>
