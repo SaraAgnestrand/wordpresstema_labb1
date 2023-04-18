@@ -26,8 +26,6 @@ function enqueue_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts' );
 
 
-
-
 // Location for the menus
 function theme_menus(){
 
@@ -46,52 +44,103 @@ add_action('init', 'theme_menus');
 
 
 //Registration for the sidebars 
-register_sidebar([
-    'name' => 'Footer 1',
-    'description' => 'Widget area footer 1',
-    'id' => 'Footer1',
-    'before_widget' => '<div class="widget">',
+function register_widgets_init(){
+    
+    register_sidebar(
+        array(
+            'name' => 'Footer',
+            'description' => 'Widget area footer',
+            'id' => 'footer-area',
+            'before_widget' => '<div class="widget">',
             'after_widget' => '</div>',
             'before_title' => '<h4>',
             'after_title' => '</h4>',
-]);
+        )
+    );
 
-register_sidebar([
-    'name' => 'Footer 2',
-    'description' => 'Widget area footer 2',
-    'id' => 'Footer2',
-    'before_widget' => '<div class="widget">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4>',
-    'after_title' => '</h4>',
-]);
 
-register_sidebar([
-    'name' => 'Footer 3',
-    'description' => 'Widget area footer 3',
-    'id' => 'Footer3',
-    'before_widget' => '<li>',
-    'after_widget' => '</li>',
-    'before_title' => '<i class="fa %1$s"></i> <a href="%2$s">',
-    'after_title' => '</a>',
-]);
+    register_sidebar(
+        array(
+            'name' =>  __('Footer 1', 'custom-theme'),
+            'description' => 'Widget area footer 1',
+            'id' => 'Footer1',
+            'before_widget' => '<div class="widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        ));
 
-register_sidebar([
-    'name' => 'Aside 1',
-    'description' => 'Widget Aside 1',
-    'id' => 'Aside1'
-]);
 
-register_sidebar([
-    'name' => 'Aside 2',
-    'description' => 'Widget Aside 2',
-    'id' => 'Aside2'
-]);
+    register_sidebar(
+        array(
+            'name' =>  __('Footer 2', 'custom-theme'),
+            'description' => 'Widget area footer 2',
+            'id' => 'Footer2',
+            'before_widget' => '<div class="widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        
+        )
+    );
 
-register_sidebar([
-    'name' => 'Aside 3',
-    'description' => 'Widget Aside 3',
-    'id' => 'Aside3'
-]);
+
+    register_sidebar(
+        array(
+            'name' => __('Footer 3', 'custom-theme'),
+            'description' => 'Widget area footer 3',
+            'id' => 'Footer3',
+            'before_widget' => '<li>',
+            'after_widget' => '</li>',
+            'before_title' => '<i class="fa %1$s"></i> <a href="%2$s">',
+            'after_title' => '</a>',
+        )
+    );
+
+
+    register_sidebar(
+        array(
+            'name' =>  __('Footer 4', 'custom-theme'),
+            'description' => 'Widget area footer 4',
+            'id' => 'Footer4',
+            'before_widget' => '<div class="widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        )
+    );
+
+
+    register_sidebar(
+        array(
+            'name' => __('Aside 1', 'custom-theme'),
+            'description' => 'Widget Aside 1',
+            'id' => 'Aside1'
+        )
+    );
+
+
+    register_sidebar(
+        array(
+            'name' => __('Aside 2', 'custom-theme'),
+            'description' => 'Widget Aside 2',
+            'id' => 'Aside2'
+        )
+    );
+
+
+    register_sidebar(
+        array(
+            'name' => __('Aside 3', 'custom-theme'),
+            'description' => 'Widget Aside 3',
+            'id' => 'Aside3'
+        )
+    );
+
+
+}
+
+
+add_action('widgets_init', 'register_widgets_init');
 
 ?>

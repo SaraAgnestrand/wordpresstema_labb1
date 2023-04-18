@@ -20,21 +20,20 @@
                     		}
                     	?>
 
-
-
-						<!-- Fixa med nav pagination -->
-
-							<nav class="navigation pagination">
-								<h2 class="screen-reader-text">Inläggsnavigering</h2>
-								<a class="prev page-numbers" href="">Föregående</a>
-								<span class="page-numbers current">1</span>
-								<a class="page-numbers" href="">2</a>
-								<a class="next page-numbers" href="">Nästa</a>
-							</nav>
-						</div>
-
-
 						
+                    <?php
+                    $args = array(
+                        'prev_text' => '<span class="pagination-prev">Föregående</span>',
+                        'next_text' => '<span class="pagination-next">Nästa</span>',
+                        'before_page_number' => '<span class="pagination-page-number">',
+                        'after_page_number' => '</span>',
+                    );
+                    echo '<div class="pagination">';
+                    echo paginate_links($args);
+                    echo '</div>';
+
+                    ?>
+						</div>
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<?php get_sidebar(); ?>
 						</aside>

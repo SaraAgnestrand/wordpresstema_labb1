@@ -2,6 +2,8 @@
 	<ul>
 		<li><?php get_search_form() ?></li>
 	</ul>
+
+	
 								
     <ul role="navigation">
         <li class="pagenav">
@@ -17,3 +19,4 @@
 		</li>
 	</ul>
 </div>
+
